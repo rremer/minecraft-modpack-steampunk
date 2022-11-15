@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "pack_format": ${mcmeta.pack_format},
+    "description": "${mcmeta.description}"
+  }
+}

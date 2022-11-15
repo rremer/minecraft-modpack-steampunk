@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.rremer</groupId>
+        <artifactId>minecraft-modpack-steampunk</artifactId>
+        <version>1.18.2-1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.github.rremer</groupId>
+    <artifactId>minecraft-modpack-steampunk-image</artifactId>
+    <version>1.18.2-1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Minecraft Modpack Steampunk Image</name>
+    <description>Container image for a steampunk Minecraft modded server.</description>
+
+    <properties>
+        <github.site.location>${project.version}/${project.artifactId}</github.site.location>
+        <image.port>25565</image.port>
+        <image.tag.source>docker.io/azul/zulu-openjdk-alpine:17-jre</image.tag.source>
+        <image.tag.target>${github.owner}/${project.parent.artifactId}</image.tag.target>
+        <image.targetdir>/${project.parent.artifactId}</image.targetdir>
+        <image.workdir>${image.targetdir}/.minecraft</image.workdir>
+        <version.docker-maven-plugin>0.33.0</version.docker-maven-plugin>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>minecraft-modpack-steampunk-server</artifactId>
+            <version>${project.version}</version>
+            <type>tar.gz</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>${version.docker-maven-plugin}</version>
+                <configuration>
+	            <showLogs>true</showLogs>
+                    <images>
+                        <image>
+                            <name>${image.tag.target}</name>
+                            <build>
+                                <from>${image.tag.source}</from>
+                                <cmd>./start_server.sh start_server.properties</cmd>
+                                <workdir>${image.workdir}</workdir>
+                                <ports>
+                                    <port>${image.port}/tcp</port>
+                                </ports>
+                                <env>
+                                    <EULA_MINECRAFT_URL>https://account.mojang.com/documents/minecraft_eula</EULA_MINECRAFT_URL>
+                                    <EULA_MINECRAFT_BOOL>false</EULA_MINECRAFT_BOOL>
+                                </env>
+                                <tags>
+                                    <tag>latest</tag>
+                                    <tag>${project.version}</tag>
+                                </tags>
+                                <labels>
+                                    <MINECRAFT_VERSION>${version.minecraft}</MINECRAFT_VERSION>
+                                    <MODPACK_VERSION>${project.version}</MODPACK_VERSION>
+
+                                    <org.opencontainers.image.created>${maven.build.timestamp}</org.opencontainers.image.created>
+                                    <org.opencontainers.image.url>${scm.url}</org.opencontainers.image.url>
+                                    <org.opencontainers.image.source>${scm.url}</org.opencontainers.image.source>
+                                    <org.opencontainers.image.version>${project.version}</org.opencontainers.image.version>
+                                    <org.opencontainers.image.title>${project.name}</org.opencontainers.image.title>
+                                    <org.opencontainers.image.description>${project.description}</org.opencontainers.image.description>
+                                    <org.opencontainers.image.licenses>${parameter.license}</org.opencontainers.image.licenses>
+                                </labels>
+                                <healthCheck>
+                                    <interval>15s</interval>
+                                    <timeout>3s</timeout>
+                                    <startPeriod>2m</startPeriod>
+                                    <retries>3</retries>
+                                    <cmd>nc -w 1 localhost ${image.port}</cmd>
+                                </healthCheck>
+                                <assembly>
+                                    <targetDir>${image.targetdir}</targetDir>
+                                    <inline>
+                                        <dependencySets>
+                                            <dependencySet>
+                                                <includes>
+                                                    <include>${project.groupId}:minecraft-modpack-steampunk-server</include>
+                                                </includes>
+                                                <unpack>true</unpack>
+                                                <outputDirectory>.</outputDirectory>
+                                                <outputFileNameMapping>${project.parent.artifactId}</outputFileNameMapping>
+                                            </dependencySet>
+                                        </dependencySets>
+                                    </inline>
+                                </assembly>
+                            </build>
+                            <run>
+                                <wait>
+                                    <healthy>true</healthy>
+                                    <time>120000</time>
+                                </wait>
+                                <env>
+                                    <EULA_MINECRAFT_BOOL>true</EULA_MINECRAFT_BOOL>
+                                </env>
+                            </run>
+                        </image>
+                    </images>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <id>build</id>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                        <phase>compile</phase>
+                    </execution>
+                    <execution>
+                        <id>test</id>
+                        <goals>
+                            <goal>start</goal>
+                            <goal>stop</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>deploy</id>
+                        <goals>
+                            <goal>push</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

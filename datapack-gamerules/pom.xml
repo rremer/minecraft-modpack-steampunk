@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.rremer</groupId>
+        <artifactId>minecraft-modpack-steampunk</artifactId>
+        <version>1.18.2-1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.github.rremer</groupId>
+    <artifactId>minecraft-modpack-steampunk-datapack-gamerules</artifactId>
+    <version>1.18.2-1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Minecraft Modpack Steampunk Gamerule Datapack</name>
+    <description>Datapack of gamerule changes for Minecraft.</description>
+
+    <properties>
+	<!-- see https://minecraft.fandom.com/wiki/Game_rule -->
+        <gamerule.disbleElytraMovementCheck>true</gamerule.disbleElytraMovementCheck>
+        <gamerule.doFireTick>true</gamerule.doFireTick>
+        <gamerule.doInsomnia>false</gamerule.doInsomnia>
+        <gamerule.globalSoundEvents>true</gamerule.globalSoundEvents>
+        <gamerule.keepInventory>false</gamerule.keepInventory>
+        <gamerule.playersSleepingPercentage>25</gamerule.playersSleepingPercentage>
+
+        <github.site.location>${project.version}/${project.artifactId}</github.site.location>
+
+        <mcmeta.description>${project.description}</mcmeta.description>
+        <mcmeta.pack_format>4</mcmeta.pack_format>
+
+        <url.schema>https://rremer.github.io/minecraft-datapack-schema/${version.minecraft-datapack-schema}</url.schema>
+
+        <version.json-schema-validator>1.2.0</version.json-schema-validator>
+        <!-- will use ref to ${version.minecraft} when we update that project -->
+        <version.minecraft-datapack-schema>1.14.4-3</version.minecraft-datapack-schema>
+    </properties>
+
+    <build>
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>src/main/resources/filtered</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>com.groupon.maven.plugin.json</groupId>
+                <artifactId>json-schema-validator</artifactId>
+                <version>${version.json-schema-validator}</version>
+                <configuration>
+                    <validations>
+                        <validation>
+                            <directory>${project.build.outputDirectory}</directory>
+                            <jsonSchema>${url.schema}/mcmeta.schema.json</jsonSchema>
+                            <includes>
+                                <include>mcmeta.json</include>
+				<include>**/*.json</include>
+                            </includes>
+                        </validation>
+                        <validation>
+                            <directory>${project.build.outputDirectory}</directory>
+                            <includes>
+				<include>**/*.json</include>
+                            </includes>
+                        </validation>
+                    </validations>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>validate</goal>
+                        </goals>
+                        <phase>test</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>datapack</id>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <descriptor>src/assembly/datapack.xml</descriptor>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
