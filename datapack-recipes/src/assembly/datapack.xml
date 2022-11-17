@@ -34,6 +34,7 @@
       <outputDirectory>.</outputDirectory>
       <includes>
         <include>**/*.json</include>
+        <include>**/*.mcfunction</include>
         <include>**/*.mcmeta</include>
       </includes>
     </fileSet>

@@ -196,9 +196,16 @@
                 <groupId>org.basepom.maven</groupId>
                 <artifactId>duplicate-finder-maven-plugin</artifactId>
                 <configuration>
-                    <ignoredResourcePatterns>
-                        <ignoredResourcePattern>pack.mcmeta</ignoredResourcePattern>
-                    </ignoredResourcePatterns>
+                    <ignoredDependencies>
+                        <dependency>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>minecraft-modpack-steampunk-datapack-gamerules</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>minecraft-modpack-steampunk-datapack-recipes</artifactId>
+                        </dependency>
+                    </ignoredDependencies>
                 </configuration>
             </plugin>
             <plugin>

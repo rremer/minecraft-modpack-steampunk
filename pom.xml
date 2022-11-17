@@ -354,6 +354,18 @@
                             </configuration>
                         </execution>
                         <execution>
+                            <id>norecipebook</id>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <phase>none</phase>
+                            <configuration>
+				<!-- https://www.curseforge.com/minecraft/mc-mods/norecipebook-fabric/files -->
+				<url>https://mediafilez.forgecdn.net/files/3548/676/norecipebook-2.2%2B1.18.jar</url>
+                                <outputDirectory>${url.mods.target}</outputDirectory>
+                            </configuration>
+                        </execution>
+                        <execution>
                             <id>backup</id>
                             <goals>
                                 <goal>wget</goal>

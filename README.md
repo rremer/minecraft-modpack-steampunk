@@ -29,7 +29,7 @@ Here' a summary of the quality-of-life features provided by this modpack.
 
 #### Recipe and Loot Table Fixes
 
-Wither skeletons have a much higher chance of dropping a wither skull.
+Wither skeletons have a much higher chance of dropping a wither skull. Removed the recipebook and all popups (toasts) related to new recipes.
 
 #### Gamerules
 
@@ -38,10 +38,6 @@ Morning starts after 25% of players online are asleep. Phantoms are disabled. Th
 #### Just Enough Items (JEI), Just Enough Resources (JER)
 
 Open your inventory to get a sidebar of searchable items and their recipes. Additionally see natural resources and their spawn distributions.
-
-#### Worldmap
-
-A realtime map to help find your way.
 
 #### Advanced Compass
 
@@ -58,6 +54,10 @@ No timer to get back your stuff.
 #### Lithium/Iris/Sodium/Shaderpacks
 
 Lithium is included to speed up framerate. Iris is included along with the 'Complementary Shaders' pack, so if you want fancy current-gen graphics and lighting, you can toggle that on.
+
+#### Emmersive Sounds and Water Effects
+
+The Effective mod adds splashing/foaming water effects based on running water heights, as well as splashes from items or entities falling into water. Matching sound effects make the Overworld a little  more lively.
 
 #### Fast Leaf Decay
 

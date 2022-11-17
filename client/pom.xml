@@ -127,6 +127,10 @@
                         <id>effective</id>
                         <phase>generate-sources</phase>
                     </execution>
+                    <execution>
+                        <id>norecipebook</id>
+                        <phase>generate-sources</phase>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
