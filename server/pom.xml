@@ -136,10 +136,6 @@
                         <phase>generate-sources</phase>
                     </execution>
                     <execution>
-                        <id>townsandtowers</id>
-                        <phase>generate-sources</phase>
-                    </execution>
-                    <execution>
                         <id>backup</id>
                         <phase>generate-sources</phase>
                     </execution>

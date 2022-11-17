@@ -342,14 +342,14 @@
                             </configuration>
                         </execution>
                         <execution>
-                            <id>townsandtowers</id>
+                            <id>effective</id>
                             <goals>
                                 <goal>wget</goal>
                             </goals>
                             <phase>none</phase>
                             <configuration>
-				<!-- https://www.curseforge.com/minecraft/mc-mods/towns-and-towers/files -->
-				<url>https://mediafilez.forgecdn.net/files/4061/457/Towns-and-Towers-1.18.2-1.9.1-B.jar</url>
+				<!-- https://www.curseforge.com/minecraft/mc-mods/effective/files -->
+				<url>https://mediafilez.forgecdn.net/files/3735/277/effective-1.2.1.jar</url>
                                 <outputDirectory>${url.mods.target}</outputDirectory>
                             </configuration>
                         </execution>

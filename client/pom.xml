@@ -123,6 +123,10 @@
                         <id>waystones</id>
                         <phase>generate-sources</phase>
                     </execution>
+                    <execution>
+                        <id>effective</id>
+                        <phase>generate-sources</phase>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
