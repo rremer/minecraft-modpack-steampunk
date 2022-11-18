@@ -49,6 +49,11 @@
             <artifactId>minecraft-modpack-steampunk-datapack-recipes</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>minecraft-modpack-steampunk-datapack-starting-inventory</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -187,6 +192,14 @@
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${url.datapacks.target}</outputDirectory>
                                 </artifactItem>
+                                <artifactItem>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>minecraft-modpack-steampunk-datapack-starting-inventory</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>zip</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${url.datapacks.target}</outputDirectory>
+                                </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
@@ -204,6 +217,10 @@
                         <dependency>
                             <groupId>${project.groupId}</groupId>
                             <artifactId>minecraft-modpack-steampunk-datapack-recipes</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>minecraft-modpack-steampunk-datapack-starting-inventory</artifactId>
                         </dependency>
                     </ignoredDependencies>
                 </configuration>

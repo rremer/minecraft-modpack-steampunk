@@ -21,6 +21,7 @@
         <module>client</module>
         <module>datapack-recipes</module>
         <module>datapack-gamerules</module>
+        <module>datapack-starting-inventory</module>
         <module>image</module>
     </modules>
 

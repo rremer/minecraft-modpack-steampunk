@@ -33,7 +33,7 @@ Wither skeletons have a much higher chance of dropping a wither skull. Removed t
 
 #### Gamerules
 
-Morning starts after 25% of players online are asleep. Phantoms are disabled. The 'player moved to fast!' check is disabled.
+Morning starts after 25% of players online are asleep. Phantoms are disabled.
 
 #### Just Enough Items (JEI), Just Enough Resources (JER)
 
@@ -41,7 +41,7 @@ Open your inventory to get a sidebar of searchable items and their recipes. Addi
 
 #### Advanced Compass
 
-Have a normal compass, but get a compass bar in your UI with distances to mobs and custom waypoints.
+Have a normal compass, but get a compass bar in your UI with distances to mobs and custom waypoints. You start with this compass to aid early game wanderlust.
 
 #### Nature's Compass
 
