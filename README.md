@@ -79,6 +79,8 @@ Steampunk AF. If you've played with any modpacks which introduce modded power li
 
 When you eat 10 new unique food items, your max health will permanently increase by 1 heart (max 30, or 3x default healthbar). Explore to find new food sources, and farm them to share the bounty with your friends.
 
+Additionally, 'Better Statistics' is included so you can see more easily what you have and have not eaten. Go to the Menu -> Statistics, and then click through to the 'Tab: A Balanced Diet'.
+
 #### Carpet Extra
 
 Dispensers can place blocks, feed and milk animals, and till soil. Amethyst nodes can be pushed with pistons, along with other previously unmovable blocks like chests, dispensers, and crafting tables. Chickens can be sheared to get feathers.

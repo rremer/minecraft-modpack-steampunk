@@ -366,6 +366,18 @@
                             </configuration>
                         </execution>
                         <execution>
+                            <id>better-statistics</id>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <phase>none</phase>
+                            <configuration>
+				<!-- https://www.curseforge.com/minecraft/mc-mods/better-stats/files -->
+				<url>https://mediafilez.forgecdn.net/files/4000/734/betterstats-1.4.2.jar</url>
+                                <outputDirectory>${url.mods.target}</outputDirectory>
+                            </configuration>
+                        </execution>
+                        <execution>
                             <id>backup</id>
                             <goals>
                                 <goal>wget</goal>

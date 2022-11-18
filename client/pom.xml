@@ -131,6 +131,10 @@
                         <id>norecipebook</id>
                         <phase>generate-sources</phase>
                     </execution>
+                    <execution>
+                        <id>better-statistics</id>
+                        <phase>generate-sources</phase>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
