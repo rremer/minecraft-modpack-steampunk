@@ -118,6 +118,8 @@ docker run -d \
 
 ```sh
 mvn versions:set -DnewVersion=1.18.2-1
+export MAVEN_OPTS="--add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.desktop/java.awt.font=ALL-UNNAMED"
+echo 'See this bug in nexus-staging-maven-plugin for description of the above: https://issues.sonatype.org/browse/OSSRH-66257'
 mvn clean deploy -Dparameter.gpg.skip=false
 mvn site site-deploy
 ```
