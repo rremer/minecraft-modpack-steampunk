@@ -18,11 +18,7 @@
 
     <properties>
 	<!-- see https://minecraft.fandom.com/wiki/Game_rule -->
-        <gamerule.disbleElytraMovementCheck>true</gamerule.disbleElytraMovementCheck>
-        <gamerule.doFireTick>true</gamerule.doFireTick>
         <gamerule.doInsomnia>false</gamerule.doInsomnia>
-        <gamerule.globalSoundEvents>true</gamerule.globalSoundEvents>
-        <gamerule.keepInventory>false</gamerule.keepInventory>
         <gamerule.playersSleepingPercentage>25</gamerule.playersSleepingPercentage>
 
         <github.site.location>${project.version}/${project.artifactId}</github.site.location>
