@@ -5,13 +5,13 @@
 [![License](https://img.shields.io/github/license/rremer/minecraft-modpack-steampunk)](https://opensource.org/licenses/MIT)
 [![Keybase PGP](https://img.shields.io/keybase/pgp/rremer)](https://keybase.io/rremer/pgp_keys.asc)
 
-A Fabric/datapack vanilla-substitute for Minecraft.
+A Fabric/datapack wrapper around 'Create' mod for a more steampunk Minecraft.
 
 ## Usage
 
 Currently, this modpack is distributed as a [MultiMC] zip.
 
-1. If you don't have Java 17+, install it. Here's a recent build for [Windows](https://cdn.azul.com/zulu/bin/zulu17.32.13-ca-jdk17.0.2-win_x64.msi), [MacOs](https://www.azul.com/downloads/?version=java-17-lts&os=macos&architecture=x86-64-bit&package=jdk), [Linux](https://www.azul.com/downloads/?version=java-17-lts&os=linux&architecture=x86-64-bit&package=jdk)
+1. If you don't have Java 17+, install it. Here's a recent build for [Windows](https://cdn.azul.com/zulu/bin/zulu17.38.21-ca-jdk17.0.5-win_x64.msi), [MacOs](https://cdn.azul.com/zulu/bin/zulu17.38.21-ca-jdk17.0.5-macosx_x64.dmg), [Linux](https://www.azul.com/downloads/?version=java-17-lts&os=linux&architecture=x86-64-bit&package=jdk)
 2. [Download MultiMC] and install.
 3. Open MultiMC and and add login credentials
 4. Click "Add Instance" and select "Import from zip" on the left-hand side.
