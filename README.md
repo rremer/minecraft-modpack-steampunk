@@ -87,7 +87,7 @@ Dispensers can place blocks, feed and milk animals, and till soil. Amethyst node
 
 #### Extra Block, Crop variants
 
-Croptopia implements fruiting trees and vegetables into world generation, along with extra higher tier foods and kitchen crafting items to make them. Slab/stair/polished variants of many blocks are added.
+Croptopia implements fruiting trees and vegetables into world generation, along with extra higher tier foods and kitchen crafting items to make them. Slab/stair/polished variants of many blocks are added. 'Chipped' included with specialized tables for a massive amount of texture variants on many blocks/items. A UI for zooming in on items so you can see their textures more easily when crafting.
 
 #### Carpet Commands
 

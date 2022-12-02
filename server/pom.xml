@@ -141,6 +141,10 @@
                         <phase>generate-sources</phase>
                     </execution>
                     <execution>
+                        <id>chipped</id>
+                        <phase>generate-sources</phase>
+                    </execution>
+                    <execution>
                         <id>backup</id>
                         <phase>generate-sources</phase>
                     </execution>

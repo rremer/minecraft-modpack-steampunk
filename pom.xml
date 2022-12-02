@@ -355,18 +355,6 @@
                             </configuration>
                         </execution>
                         <execution>
-                            <id>norecipebook</id>
-                            <goals>
-                                <goal>wget</goal>
-                            </goals>
-                            <phase>none</phase>
-                            <configuration>
-				<!-- https://www.curseforge.com/minecraft/mc-mods/norecipebook-fabric/files -->
-				<url>https://mediafilez.forgecdn.net/files/3548/676/norecipebook-2.2%2B1.18.jar</url>
-                                <outputDirectory>${url.mods.target}</outputDirectory>
-                            </configuration>
-                        </execution>
-                        <execution>
                             <id>better-statistics</id>
                             <goals>
                                 <goal>wget</goal>
@@ -375,6 +363,30 @@
                             <configuration>
 				<!-- https://www.curseforge.com/minecraft/mc-mods/better-stats/files -->
 				<url>https://mediafilez.forgecdn.net/files/4000/734/betterstats-1.4.2.jar</url>
+                                <outputDirectory>${url.mods.target}</outputDirectory>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>chipped</id>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <phase>none</phase>
+                            <configuration>
+				<!-- https://www.curseforge.com/minecraft/mc-mods/chipped/files -->
+				<url>https://mediafilez.forgecdn.net/files/3748/666/chipped-1.2.jar</url>
+                                <outputDirectory>${url.mods.target}</outputDirectory>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>big-items-duh</id>
+                            <goals>
+                                <goal>wget</goal>
+                            </goals>
+                            <phase>none</phase>
+                            <configuration>
+				<!-- https://github.com/Siphalor/big-items-duh/tags -->
+				<url>https://github.com/Siphalor/big-items-duh/releases/download/v1.1.2%2Bmc1.18.2/big-items-duh-1.1.2+mc1.18.2.jar</url>
                                 <outputDirectory>${url.mods.target}</outputDirectory>
                             </configuration>
                         </execution>

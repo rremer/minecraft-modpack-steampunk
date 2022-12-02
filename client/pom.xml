@@ -128,11 +128,15 @@
                         <phase>generate-sources</phase>
                     </execution>
                     <execution>
-                        <id>norecipebook</id>
+                        <id>better-statistics</id>
                         <phase>generate-sources</phase>
                     </execution>
                     <execution>
-                        <id>better-statistics</id>
+                        <id>chipped</id>
+                        <phase>generate-sources</phase>
+                    </execution>
+                    <execution>
+                        <id>big-items-duh</id>
                         <phase>generate-sources</phase>
                     </execution>
                 </executions>

@@ -1,9 +1,11 @@
 {
 	"basics": {
 		"favorites": [],
+		"hiddenFavorites": [],
+		"displayHistory": [],
 		// Declares whether cheating mode is on.
 		"cheating": false,
-		"favoritesEnabled": true,
+		"favoritesEnabled": false,
 		"keyBindings": {
 			"recipeKeybind": {
 				"keyCode": "key.keyboard.r",
@@ -57,8 +59,10 @@
 		"filtering": {
 			"shouldFilterDisplays": true,
 			"filteringRules": [
-				"{id:\"roughlyenoughitems:manual\",rule:{}}"
+				"{id:\"roughlyenoughitems:manual\",rule:{}}",
+				"{id:\"roughlyenoughitems:basic\",rule:{}}"
 			],
+			"filteringQuickCraftCategories": { },
 			"filteredStacks": []
 		},
 		"enableJeiCompatibilityLayer": true,
@@ -78,19 +82,20 @@
 			// Declares whether entry rendering time should be debugged.
 			"debugRenderTimeRequired": false,
 			// Merges displays with equal contents under 1 display.
-			"mergeDisplayUnderOne": true
+			"mergeDisplayUnderOne": true,
+			"favoriteAddWidgetMode": "ALWAYS_VISIBLE"
 		},
 		"accessibility": {
 			"entrySize": 1.0,
 			// Declares the position of the entry panel.
 			"displayPanelLocation": "RIGHT",
-			// Declares whether scrolled entry panel should snap to rows.
-			"snapToRows": false,
 			// Declares how the scrollbar in composite screen should act.
 			"compositeScrollBarPermanent": false,
 			"toastDisplayedOnCopyIdentifier": true,
 			// Declares whether REI should use compact tabs for categories.
-			"useCompactTabs": true
+			"useCompactTabs": true,
+			// Declares whether REI should use compact tab buttons for categories.
+			"useCompactTabButtons": false
 		},
 		"search": {
 			// Declares whether search time should be debugged.
@@ -99,6 +104,7 @@
 			"asyncSearch": true,
 			// Declares how many entries should be grouped one async search.
 			"asyncSearchPartitionSize": 100,
+			"patchAsyncThreadCrash": true,
 			"tooltipSearch": "ALWAYS",
 			"tagSearch": "PREFIX",
 			"identifierSearch": "ALWAYS",
@@ -110,13 +116,16 @@
 			// Declares the command used in servers to cheat items.
 			"giveCommand": "/give {player_name} {item_identifier}{nbt} {count}",
 			// Declares the command used to change weather.
-			"weatherCommand": "/weather {weather}"
+			"weatherCommand": "/weather {weather}",
+			// Declares the command used to change time.
+			"timeCommand": "/time set {time}"
 		},
 		"miscellaneous": {
 			// Declares whether arrows in containers should be clickable.
 			"clickableRecipeArrows": true,
 			"registerRecipesInAnotherThread": true,
-			"newFastEntryRendering": true
+			"newFastEntryRendering": true,
+			"cachingFastEntryRendering": false
 		}
 	},
 	"appearance": {
@@ -129,7 +138,7 @@
 			// Declares the position of the config button.
 			"configButtonLocation": "LOWER",
 			// Declares whether the craftable filter button is enabled.
-			"enableCraftableOnlyButton": false
+			"showCraftableOnlyButton": true
 		},
 		// Declares the appearance of recipe's border.
 		"recipeBorder": "DEFAULT",
@@ -141,13 +150,18 @@
 		"verticalEntriesBoundariesRows": 1000,
 		"favoritesHorizontalEntriesBoundaries": 1.0,
 		"favoritesHorizontalEntriesBoundariesColumns": 50,
-		"syntaxHighlightingMode": "COLORFUL"
+		"syntaxHighlightingMode": "COLORFUL",
+		"isFocusModeZoomed": false
 	},
 	"functionality": {
+		"inputMethod": null,
 		// Declares whether REI should remove the recipe book.
 		"disableRecipeBook": true,
+		// Declares whether mob effects should be on the left side instead of the right side.
+		"leftSideMobEffects": false,
 		// Declares whether subsets is enabled.
 		"isSubsetsEnabled": false,
-		"allowInventoryHighlighting": true
+		"allowInventoryHighlighting": true,
+		"itemCheatingMode": "REI_LIKE"
 	}
 }
