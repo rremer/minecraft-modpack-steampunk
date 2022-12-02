@@ -5,12 +5,12 @@
     <parent>
         <groupId>com.github.rremer</groupId>
         <artifactId>minecraft-modpack-steampunk</artifactId>
-        <version>1.18.2-2-SNAPSHOT</version>
+        <version>1.18.2-2</version>
     </parent>
 
     <groupId>com.github.rremer</groupId>
     <artifactId>minecraft-modpack-steampunk-datapack-recipes</artifactId>
-    <version>1.18.2-2-SNAPSHOT</version>
+    <version>1.18.2-2</version>
     <packaging>jar</packaging>
 
     <name>Minecraft Modpack Steampunk Recipe Datapack</name>
