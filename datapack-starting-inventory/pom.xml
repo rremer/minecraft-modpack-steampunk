@@ -5,12 +5,12 @@
     <parent>
         <groupId>com.github.rremer</groupId>
         <artifactId>minecraft-modpack-steampunk</artifactId>
-        <version>1.18.2-2</version>
+        <version>1.18.2-3-SNAPSHOT</version>
     </parent>
 
     <groupId>com.github.rremer</groupId>
     <artifactId>minecraft-modpack-steampunk-datapack-starting-inventory</artifactId>
-    <version>1.18.2-2</version>
+    <version>1.18.2-3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Minecraft Modpack Steampunk Starting Inventory Datapack</name>
